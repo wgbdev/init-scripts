@@ -7,7 +7,7 @@ SCRIPTS_DIR=".build-util/scripts"
 
 SCRIPTS_REPO="https://github.com/wgbdev/build-scripts.git"
 
-if ! [ -d $BUILD_UTIL_DIR ]; then
+if ! [ -d $SCRIPTS_DIR ]; then
 	if ! [ -f build-main.sh ]; then
 		# source export these files
 		echo "No prior .scripts directory was found, pulling and calling $SCRIPTS_DIR/$SCRIPTS_FILE"
