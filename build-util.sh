@@ -12,11 +12,11 @@ if ! [ -d $SCRIPTS_DIR ]; then
 	if ! [ -f "$SCRIPTS_FILE" ]; then
 
 		# source export these files
-		echo "No prior .scripts directory was found, pulling and calling $SCRIPTS_DIR/$SCRIPTS_FILE"
+		echo "No prior $SCRIPTS_DIR directory was found, pulling and calling $SCRIPTS_DIR/$SCRIPTS_FILE"
 		git clone -q "$SCRIPTS_REPO" $SCRIPTS_DIR
 		echo
 	else
-		echo "Se are running this utility within the $SCRIPTS_DIR directory."
+		echo "We are running this utility within the $SCRIPTS_DIR directory."
 
 		SCRIPTS_DIR="."
 	fi
