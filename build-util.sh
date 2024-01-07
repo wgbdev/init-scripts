@@ -1,21 +1,22 @@
 #!/bin/bash
 
-# NOTE: For this to work properly,you need to add .scripts/ and .env-settings 
-#.      to your .gitignore file
-
 set -e
 
-SCRIPTS_DIR=".scripts/"
+SCRIPTS_FILE="build-main.sh"
+SCRIPTS_DIR=".build-util/scripts"
+
 SCRIPTS_REPO="https://github.com/wgbdev/build-scripts.git"
 
-if ! [ -d .scripts ]; then
+if ! [ -d $BUILD_UTIL_DIR ]; then
 	if ! [ -f build-main.sh ]; then
 		# source export these files
-		echo "No prior .scripts directory was found, pulling and calling .scripts/build-main.sh"
-		git clone -q "$SCRIPTS_REPO" .scripts
+		echo "No prior .scripts directory was found, pulling and calling $SCRIPTS_DIR/$SCRIPTS_FILE"
+		git clone -q "$SCRIPTS_REPO" $SCRIPTS_DIR
 		echo
 	else
-		SCRIPTS_DIR=""
+		echo "Se are running this utility within the $SCRIPTS_DIR directory."
+
+		SCRIPTS_DIR="."
 	fi
 else
 
@@ -29,9 +30,9 @@ else
 	###if [ "$retval" -eq 0 ]; then
 	###	cp batch.sh ../xx-batch.sh
 	###fi
-	cd ..
+	cd ../..
 fi
 echo
 
-./"$SCRIPTS_DIR"build-main.sh "$@"
+./"$SCRIPTS_DIR/$SCRIPTS_FILE" "$@"
 
