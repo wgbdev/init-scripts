@@ -18,7 +18,8 @@ if ! [ -d .scripts ]; then
 		SCRIPTS_DIR=""
 	fi
 else
-echo "checking for latest version of scripts..."
+
+	echo "Checking for latest version of scripts..."
 
 	cd "$SCRIPTS_DIR"
 	git pull
