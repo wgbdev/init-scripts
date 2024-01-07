@@ -7,8 +7,16 @@ SCRIPTS_DIR=".build-util/scripts"
 
 SCRIPTS_REPO="https://github.com/wgbdev/build-scripts.git"
 
+echo "SCRIPTS_DIR=$SCRIPTS_DIR"
+
 if ! [ -d $SCRIPTS_DIR ]; then
-	if ! [ -f build-main.sh ]; then
+
+echo not there
+
+	if ! [ -f "$SCRIPTS_FILE" ]; then
+
+echo no $SCRIPTS_FILE
+
 		# source export these files
 		echo "No prior .scripts directory was found, pulling and calling $SCRIPTS_DIR/$SCRIPTS_FILE"
 		git clone -q "$SCRIPTS_REPO" $SCRIPTS_DIR
