@@ -26,7 +26,7 @@ else
 	echo "Checking for latest version of scripts..."
 
 	cd "$SCRIPTS_DIR"
-	git pull
+	git pull -q
 	retval=$?
 
 	#echo "retval=[$retval]"
