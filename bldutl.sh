@@ -2,7 +2,7 @@
 
 set -e
 
-BUILD_UTIL_DIR=".build-cfg"
+BUILD_UTIL_DIR="."
 SCRIPTS_DIR="$BUILD_UTIL_DIR/.scripts"
 SCRIPTS_FILE="build-main.sh"
 
