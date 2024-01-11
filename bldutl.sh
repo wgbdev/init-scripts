@@ -33,7 +33,7 @@ else
 	###if [ "$retval" -eq 0 ]; then
 	###	cp batch.sh ../xx-batch.sh
 	###fi
-	cd ../..
+	cd ..
 fi
 echo
 
