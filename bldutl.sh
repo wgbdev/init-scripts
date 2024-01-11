@@ -3,7 +3,7 @@
 set -e
 
 BUILD_UTIL_DIR="."
-SCRIPTS_DIR="$BUILD_UTIL_DIR/.scripts"
+SCRIPTS_DIR=".scripts"
 SCRIPTS_FILE="build-main.sh"
 
 SCRIPTS_REPO="https://github.com/wgbdev/build-scripts.git"
